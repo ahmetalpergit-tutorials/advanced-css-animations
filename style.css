@@ -13,25 +13,28 @@ a {
    font-size: 40px;
    border: 3px solid white;
    padding: 40px 80px;
+   transition: all 0.3s;
    position: relative;
    overflow: hidden;
 }
 
+a:hover {
+   color: #fff;
+   background-color: tomato;
+}
+
 a::before {
-   content: 'YEAH!';
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 100%;
+   content: '';
+   height: 50px;
    width: 100%;
    position: absolute;
    top: 0;
    left: 0;
-   transform: translateY(-100%);
-   background-color: red;
-   transition: all 0.3s;
+   background-color: #fff;
+   transform: translateX(-100%) rotate(45deg);
+   transition: all 0.2s;
 }
 
 a:hover::before {
-   transform: translateY(0);
+   transform: translateX(100%) rotate(45deg);
 }
