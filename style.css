@@ -8,9 +8,9 @@ body {
 }
 
 .btn {
-   border: none;
-   background-color: rgb(255, 216, 43);
-   color: #fff;
+   border: 3px solid rgb(255, 216, 43);
+   background-color: transparent;
+   color: transparent;
    padding: 20px 40px;
    font-size: 25px;
    text-transform: uppercase;
@@ -31,24 +31,27 @@ body {
    height: 100%;
    width: 100%;
    border: none;
-   transform-origin: top;
-   transition: all 0.5s;
-   transform: rotateX(270deg);
+   background-color: #171717;
+   color: rgb(255, 216, 43);
+   transition: 0.2s;
 }
 
 .btn::before {
-   background-color: rgb(0, 255, 76);
+   transform: translateX(0) scale(1);
+   opacity: 1;
 }
 
 .btn::after {
-   background-color: rgb(255, 0, 0);
+   transform: translateX(-100%) scale(0);
+   opacity: 0;
 }
 
 .btn:hover::before {
-   transform: rotateX(0deg);
+   transform: translateX(100%) scale(0);
+   opacity: 0;
 }
 
 .btn:hover::after {
-   transition-delay: 0.25s;
-   transform: rotateX(0deg);
+   transform: translateX(0) scale(1);
+   opacity: 1;
 }
